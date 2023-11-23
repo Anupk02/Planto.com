@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="fevicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <link href="font-awesome/css/fontawesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="style2.css?v=1">
+    <script src="jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <style>
+
+      form#feedback-form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        padding:30px;
+      }
+      
+      form#feedback-form div {
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      
+      label {
+        display: inline-block;
+        width: 55px;
+        text-align: right;
+        margin-right: 10px;
+      }
+      
+      input#name,
+      input#email {
+        width: 250px;
+        padding: 5px;
+      }
+      .button{
+        display: block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      textarea{
+          width: 290px;
+          height: 130px;
+          resize: none;
+          margin-left: 15px;
+          padding: 5px;
+      }
+      .button.submit-button:hover {
+        background-color: #45a049;
+      }
+      .star-rating{
+        font-size: 0;
+      }
+      .star-rating__wrap{
+        display: inline-block;
+        font-size: 1rem;
+      }
+      .star-rating__wrap:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .star-rating__ico{
+        float: right;
+        padding-left: 2px;
+        cursor: pointer;
+        color: #0dbd33;
+      }
+      .star-rating__ico:last-child{
+        padding-left: 0;
+      }
+      .star-rating__input{
+        display: none;
+      }
+      .star-rating__ico:hover:before,
+      .star-rating__ico:hover ~ .star-rating__ico:before,
+      .star-rating__input:checked ~ .star-rating__ico:before
+      {
+        content: "\f005";
+      }
+      label[title]:hover {
+        color: #0dbd33;
+      }
+          </style>
+</head>
+<body>
+    <div class="navbar h">
+    <div class="logo1">
+        <img src="logo_thumbnail.png" class="logo" alt="icon">
+    </div>
+    <ul>
+      <li><a href="index.php">HOME</a></li>
+      <li><a href="index.php">Privacy</a></li>
+      <li><a href="index.php">Blog or Tips</a></li>
+      <li><a href="about.html">About</a></li>
+    </div>
+    <div class="main h">
+      <div class="navbar1" style="height: 4.5rem;">
+
+      
+      </div>
+        <div class="products"> 
+          <form id="feedback-form" style="background-color: antiquewhite;">
+            <h2 style="text-align: center; padding: 10px;">Feedback form</h2>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+          
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+          
+            <div class="star-rating">
+              <div class="star-rating__wrap">
+                <h4>Give rating to our site:</h4><br>
+                <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="Excellent"></label>
+                <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="very Good"></label>
+                <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="normal"></label>
+                <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="bad"></label>
+                <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="very bad"></label>
+              </div>
+            </div>
+          
+            <textarea id="feedback-text" name="feedback" placeholder="Enter your feedback" required></textarea><br>
+          
+            <button type="submit" class="button">Submit</button>
+          </form>
+          
+          <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="icon-box">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <h4 class="modal-title w-100">Thank you!</h4>
+                </div>
+                <div class="modal-body">
+                  <p class="text-center">Thank you for your feedback! We greatly appreciate your support and will continue to strive for excellence on our website.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var feedbackForm = document.getElementById("feedback-form");
+      var modal = document.querySelector("#myModal");
+      var modalCloseBtn = modal.querySelector(".btn-success");
+  
+      feedbackForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        modal.style.display = "block";
+        document.body.classList.add("modal-open");
+      });
+  
+      modalCloseBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        feedbackForm.reset();
+      });
+    });
+  </script>
+             
+    
+  <footer >
+    <p style="text-align: center;">&copy; 2023 Planto Nursery Website. All rights reserved. | <a href="privacy.html" style="color: chartreuse;">Privacy Policy</a></p>
+  </footer>
+</div>
+</body>
+</html>
